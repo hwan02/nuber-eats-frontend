@@ -9,7 +9,7 @@ export const client = new ApolloClient({
       Query: {
         fields: {
           isLoggedIn: {
-            read(){
+            read() {
               return isLoggedInVar();
             }
           }
