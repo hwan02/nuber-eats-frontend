@@ -21,6 +21,7 @@
     "autoprefixer": "^10.2.5",
     "global": "^4.4.0",
     "graphql": "^15.5.0",
+    "mock-apollo-client": "^1.1.0",
     "postcss": "^8.2.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -41,6 +42,7 @@
     "apollo:codegen": "rimraf src/__genrated__  && apollo client:codegen src/__generated__ --target=typescript --outputFlat",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -63,5 +65,12 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/components/**/*.tsx",
+      "./src/pages/**/*.tsx",
+      "./src/routers/**/*.tsx"
+    ]
   }
 }
